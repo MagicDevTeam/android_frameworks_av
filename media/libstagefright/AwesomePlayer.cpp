@@ -259,11 +259,7 @@ AwesomePlayer::AwesomePlayer()
     mIsTunnelAudio = false;
 #endif
 
-#ifdef QCOM_HARDWARE
     mLateAVSyncMargin = ExtendedUtils::ShellProp::getMaxAVSyncLateMargin();
-#else
-    mLateAVSyncMargin = 40000;
-#endif
 }
 
 AwesomePlayer::~AwesomePlayer() {
