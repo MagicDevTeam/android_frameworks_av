@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 
-//#define LOG_NDEBUG 0
+#define LOG_NDEBUG 0
 #define LOG_TAG "OMXCodec"
 #include <utils/Log.h>
 
@@ -5333,8 +5333,7 @@ status_t QueryCodec(
 #else
     portFormat.nPortIndex = !isEncoder ? 1 : 0;
 #endif
-    for (OMX_U32 index = 0;;index++) {
-        portFormat.nIndex = index;
+    for (portFormat.nIndex = 0;; ++portFormat.nIndex) {
         err = omx->getParameter(
                 node, OMX_IndexParamVideoPortFormat,
                 &portFormat, sizeof(portFormat));
