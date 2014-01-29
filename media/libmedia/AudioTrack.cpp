@@ -23,8 +23,6 @@
 #include <sys/resource.h>
 #include <audio_utils/primitives.h>
 #include <binder/IPCThreadState.h>
-#include <media/AudioParameter.h>
-#include <media/AudioSystem.h>
 #include <media/AudioTrack.h>
 #include <utils/Log.h>
 #include <private/media/AudioTrackShared.h>
@@ -371,6 +369,7 @@ status_t AudioTrack::set(
         mFrameSize = sizeof(uint8_t);
         mFrameSizeAF = sizeof(uint8_t);
     }
+#endif
 
     audio_io_handle_t output = AudioSystem::getOutput(
                                     streamType,
