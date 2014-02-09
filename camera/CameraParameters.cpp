@@ -384,10 +384,6 @@ const char CameraParameters::FOCUS_MODE_CONTINUOUS_PICTURE[] = "continuous-pictu
 const char CameraParameters::FOCUS_MODE_MANUAL_POSITION[] = "manual";
 #endif
 #if defined(QCOM_HARDWARE)
-#ifdef QCOM_LEGACY_CAM_PARAMS
-const char CameraParameters::FOCUS_MODE_CONTINUOUS_CAMERA[] = "continuous-camera";
-#endif
-#if defined(QCOM_HARDWARE)
 const char CameraParameters::FOCUS_MODE_NORMAL[] = "normal";
 
 
